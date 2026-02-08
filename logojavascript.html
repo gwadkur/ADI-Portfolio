@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran JavaScript - Kelas X</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+            padding: 3rem 8%;
+        }
+
+        h1 {
+            color: #e76f51;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #e76f51;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            color: #e76f51;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #d65a3f;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d65a3f;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 5%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pembelajaran JavaScript - Kelas X</h1>
+
+    <h2>1. Cara Menambahkan JavaScript ke HTML</h2>
+    <p>Ada 3 cara untuk menjalankan kode JavaScript:</p>
+    <ul>
+        <li><strong>Inline JS</strong>: Ditulis di dalam atribut HTML seperti <code>onclick</code><br>
+            Contoh:<br>
+            <code>&lt;button onclick="alert('Halo!')"&gt;Klik Saya&lt;/button&gt;</code>
+        </li>
+        <li><strong>Internal JS</strong>: Ditulis di dalam tag <code>&lt;script&gt;</code> di bagian <code>&lt;head&gt;</code> atau <code>&lt;body&gt;</code> HTML<br>
+            Contoh:<br>
+<pre>
+&lt;body&gt;
+    &lt;script&gt;
+        console.log("Halo dari JavaScript!");
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+        </li>
+        <li><strong>External JS</strong>: Ditulis di file terpisah dengan ekstensi <code>.js</code>, kemudian dihubungkan ke HTML<br>
+            Contoh:<br>
+<pre>
+&lt;body&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+            <em>Saran: Letakkan tag <code>&lt;script&gt;</code> di akhir <code>&lt;body&gt;</code> agar konten HTML dimuat terlebih dahulu.</em>
+        </li>
+    </ul>
+
+    <h2>2. Sintaks Dasar</h2>
+    <ul>
+        <li><strong>Komentar</strong>: Untuk catatan atau menonaktifkan kode<br>
+            Contoh:<br>
+<pre>
+// Komentar satu baris
+
+/* 
+Komentar 
+banyak baris 
+*/
+</pre>
+        </li>
+        <li><strong>Pernyataan</strong>: Setiap perintah diakhiri dengan titik koma (<code>;</code>) (opsional tapi disarankan)<br>
+            Contoh: <code>let nama = "Sharon";</code>
+        </li>
+        <li><strong>Pemisah Baris</strong>: JavaScript akan membaca baris baru sebagai pemisah pernyataan jika tidak ada titik koma, tapi bisa menyebabkan error jika tidak tepat.
+        </li>
+    </ul>
+
+    <h2>3. Variabel dan Tipe Data</h2>
+    <p>Variabel digunakan untuk menyimpan nilai. Ada 3 cara mendeklarasikan variabel:</p>
+    <ul>
+        <li><code>let</code>: Nilainya bisa diubah nanti (bersifat blok-level)</li>
+        <li><code>const</code>: Nilainya tidak bisa diubah setelah dideklarasikan (konstanta)</li>
+        <li><code>var</code>: Cara lama (tidak disarankan karena cakupannya lebih luas)</li>
+    </ul>
+
+    <h3>Tipe Data Utama:</h3>
+    <ul>
+        <li><strong>String</strong>: Teks, ditulis dengan kutip tunggal (<code>'...'</code>) atau ganda (<code>"..."</code>)<br>
+            Contoh: <code>let pesan = "Halo Dunia!";</code>
+        </li>
+        <li><strong>Number</strong>: Angka (bilangan bulat atau desimal)<br>
+            Contoh: <code>let umur = 25; let tinggi = 1.65;</code>
+        </li>
+        <li><strong>Boolean</strong>: Nilai benar (<code>true</code>) atau salah (<code>false</code>)<br>
+            Contoh: <code>let isOnline = true;</code>
+        </li>
+        <li><strong>Null</strong>: Nilai kosong yang ditentukan secara sengaja</li>
+        <li><strong>Undefined</strong>: Nilai yang belum ditetapkan</li>
+        <li><strong>Object</strong>: Koleksi pasangan kunci-nilai (misal: objek pengguna)<br>
+            Contoh:<br>
+<pre>
+const pengguna = {
+    nama: "Sharon",
+    pekerjaan: "Developer",
+    umur: 25
+};
+</pre>
+        </li>
+    </ul>
+</body>
+</html>

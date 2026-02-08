@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #444444;
+    line-height: 1.7;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #e76f51;
+    border-radius: 2px;
+}
+
+/* Section Umum */
+section {
+    padding: 8rem 8% 4rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Hero Section */
+#hero {
+    flex-wrap: wrap-reverse;
+    position: relative;
+    padding-top: 10rem;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #e76f51;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.hero-text p span {
+    color: #e76f51;
+    font-weight: 500;
+}
+
+.hero-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Foto Karakter Bulat */
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f8c4b4;
+    border: 4px solid #f8c4b4;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e76f51;
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-10px); }
+    60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* About Me Section */
+#about {
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1 1 400px;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    color: #e76f51;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.about-text p small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Foto Aku Tidak Lancip */
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* My Toolkit Section */
+#toolkit {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+#toolkit h2 {
+    font-size: 2.2rem;
+    color: #e76f51;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toolkit-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.toolkit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+}
+
+.tool-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.tool-item a {
+    text-decoration: none;
+    color: #444;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding-bottom: 6rem;
+}
+
+#projects h2 {
+    font-size: 2.2rem;
+    color: #e76f51;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #e76f51;
+    font-weight: 500;
+}
+
+/* Let's Connect Section */
+#connect {
+    flex-wrap: wrap;
+    background-color: #fff5f3;
+}
+
+.connect-text {
+    flex: 1 1 300px;
+}
+
+.connect-text h2 {
+    font-size: 2.2rem;
+    color: #e76f51;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.connect-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.connect-text p small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    opacity: 0.7;
+}
+
+.connect-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+.connect-form input,
+.connect-form textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #e76f51;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    color: #444;
+    outline: none;
+}
+
+.connect-form input::placeholder,
+.connect-form textarea::placeholder {
+    color: #999;
+}
+
+.connect-form textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+.connect-form button {
+    width: fit-content;
+    padding: 0.8rem 2rem;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.connect-form button:hover {
+    background-color: #d65a3f;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    section {
+        padding: 6rem 5% 3rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .hero-text p {
+        text-align: center;
+        margin: 0 auto 2rem;
+    }
+
+    .about-text h2,
+    #toolkit h2,
+    #projects h2,
+    .connect-text h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: left;
+    }
+
+    .connect-form {
+        margin: 0 auto;
+    }
+}

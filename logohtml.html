@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran HTML - Kelas X</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+            padding: 3rem 8%;
+        }
+
+        h1 {
+            color: #e76f51;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #e76f51;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            color: #e76f51;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d65a3f;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 5%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pembelajaran HTML - Kelas X</h1>
+
+    <h2>1. Elemen Teks Dasar</h2>
+    <p>Digunakan untuk menampilkan dan memformat teks:</p>
+    <ul>
+        <li><code>&lt;h1&gt;</code> hingga <code>&lt;h6&gt;</code>: Judul dengan tingkat kepentingan berbeda (h1 paling besar, h6 paling kecil)</li>
+        <li><code>&lt;p&gt;</code>: Paragraf teks</li>
+        <li><code>&lt;br&gt;</code>: Pemisah baris baru</li>
+        <li><code>&lt;hr&gt;</code>: Garis horizontal pemisah</li>
+        <li><code>&lt;strong&gt;</code> atau <code>&lt;b&gt;</code>: Teks tebal (strong lebih menekankan makna secara semantik)</li>
+        <li><code>&lt;em&gt;</code> atau <code>&lt;i&gt;</code>: Teks miring (em lebih menekankan makna secara semantik)</li>
+        <li><code>&lt;u&gt;</code>: Teks bergaris bawah</li>
+        <li><code>&lt;blockquote&gt;</code>: Kutipan panjang</li>
+        <li><code>&lt;code&gt;</code>: Teks kode program</li>
+    </ul>
+
+    <h2>2. Elemen Penyusun Struktur</h2>
+    <p>Digunakan untuk mengatur tata letak konten:</p>
+    <ul>
+        <li><code>&lt;div&gt;</code>: Wadah umum untuk mengelompokkan elemen (blok-level)</li>
+        <li><code>&lt;span&gt;</code>: Wadah umum untuk mengelompokkan teks atau elemen kecil (inline)</li>
+        <li><code>&lt;header&gt;</code>: Bagian kepala halaman atau bagian</li>
+        <li><code>&lt;nav&gt;</code>: Bagian navigasi</li>
+        <li><code>&lt;main&gt;</code>: Konten utama halaman</li>
+        <li><code>&lt;section&gt;</code>: Bagian khusus dalam halaman</li>
+        <li><code>&lt;article&gt;</code>: Konten yang mandiri (misal: artikel blog)</li>
+        <li><code>&lt;footer&gt;</code>: Bagian kaki halaman atau bagian</li>
+    </ul>
+
+    <h2>3. Elemen Media</h2>
+    <p>Digunakan untuk menampilkan konten multimedia:</p>
+    <ul>
+        <li><code>&lt;img src="url-gambar" alt="deskripsi-gambar"&gt;</code>: Menampilkan gambar (atribut <code>alt</code> penting untuk aksesibilitas)</li>
+        <li><code>&lt;audio src="url-audio" controls&gt;</code>: Memutar file audio (atribut <code>controls</code> menampilkan tombol kontrol)</li>
+        <li><code>&lt;video src="url-video" controls width="lebar"&gt;</code>: Memutar file video</li>
+    </ul>
+
+    <h2>4. Elemen Link dan Navigasi</h2>
+    <ul>
+        <li><code>&lt;a href="url-tujuan" target="_blank"&gt;Teks Link&lt;/a&gt;</code>: Membuat tautan (atribut <code>target="_blank"</code> membuka di tab baru)</li>
+        <li><code>&lt;a href="#id-elemen"&gt;Scroll ke Bagian Ini&lt;/a&gt;</code>: Tautan internal ke elemen dengan ID tertentu</li>
+    </ul>
+</body>
+</html>

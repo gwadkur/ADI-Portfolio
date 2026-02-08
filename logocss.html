@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran CSS - Kelas X</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.8;
+            padding: 3rem 8%;
+        }
+
+        h1 {
+            color: #e76f51;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #e76f51;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            color: #e76f51;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #d65a3f;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d65a3f;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 5%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pembelajaran CSS - Kelas X</h1>
+
+    <h2>1. Cara Menambahkan CSS ke HTML</h2>
+    <p>Ada 3 cara untuk menerapkan CSS:</p>
+    <ul>
+        <li><strong>Inline CSS</strong>: Ditulis langsung di dalam tag HTML menggunakan atribut <code>style</code><br>
+            Contoh:<br>
+            <code>&lt;p style="color: red; font-size: 16px;"&gt;Teks merah&lt;/p&gt;</code>
+        </li>
+        <li><strong>Internal CSS</strong>: Ditulis di dalam tag <code>&lt;style&gt;</code> di bagian <code>&lt;head&gt;</code> HTML<br>
+            Contoh:<br>
+<pre>
+&lt;head&gt;
+    &lt;style&gt;
+        p { color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+</pre>
+        </li>
+        <li><strong>External CSS</strong>: Ditulis di file terpisah dengan ekstensi <code>.css</code>, kemudian dihubungkan ke HTML menggunakan <code>&lt;link&gt;</code><br>
+            Contoh:<br>
+<pre>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+</pre>
+        </li>
+    </ul>
+
+    <h2>2. Sintaks Dasar CSS</h2>
+    <p>Setiap aturan CSS terdiri dari selector dan deklarasi block:</p>
+<pre>
+selector {
+    properti: nilai;
+    properti-lain: nilai-lain;
+}
+</pre>
+    <ul>
+        <li><strong>Selector</strong>: Menentukan elemen HTML yang akan diatur (misal: <code>p</code>, <code>.kelas</code>, <code>#id</code>)</li>
+        <li><strong>Properti</strong>: Apa yang akan diubah (misal: <code>color</code>, <code>font-size</code>)</li>
+        <li><strong>Nilai</strong>: Pengaturan untuk properti tersebut (misal: <code>red</code>, <code>18px</code>)</li>
+    </ul>
+
+    <h2>3. Jenis Selector Umum</h2>
+    <ul>
+        <li><strong>Element Selector</strong>: Memilih elemen berdasarkan nama tag<br>
+            Contoh: <code>h1 { text-align: center; }</code> (semua tag <code>&lt;h1&gt;</code> akan rata tengah)
+        </li>
+        <li><strong>Class Selector</strong>: Memilih elemen dengan atribut <code>class</code> tertentu (dimulai dengan titik <code>.</code>)<br>
+            Contoh: <code>.teks-kuning { color: yellow; }</code> (elemen dengan <code>class="teks-kuning"</code>)
+        </li>
+        <li><strong>ID Selector</strong>: Memilih elemen dengan atribut <code>id</code> tertentu (dimulai dengan pagar <code>#</code>, harus unik per halaman)<br>
+            Contoh: <code>#header-utama { background: gray; }</code> (elemen dengan <code>id="header-utama"</code>)
+        </li>
+        <li><strong>Universal Selector</strong>: Memilih semua elemen (gunakan tanda bintang <code>*</code>)<br>
+            Contoh: <code>* { margin: 0; padding: 0; }</code> (menghapus margin/padding default)
+        </li>
+        <li><strong>Group Selector</strong>: Memilih beberapa selector sekaligus (pisahkan dengan koma)<br>
+            Contoh: <code>h1, h2, h3 { font-family: Arial; }</code>
+        </li>
+    </ul>
+
+    <h2>4. Properti CSS Dasar</h2>
+    <h3>A. Pengaturan Teks</h3>
+    <ul>
+        <li><code>color</code>: Warna teks (misal: <code>red</code>, <code>#ff0000</code>, <code>rgb(255,0,0)</code>)</li>
+        <li><code>font-family</code>: Jenis font (misal: <code>Arial</code>, <code>'Segoe UI'</code>, <code>sans-serif</code>)</li>
+        <li><code>font-size</code>: Ukuran teks (misal: <code>16px</code>, <code>1.2rem</code>, <code>120%</code>)</li>
+        <li><code>font-weight</code>: Ketebalan teks (misal: <code>bold</code>, <code>400</code> = normal, <code>700</code> = tebal)</li>
+        <li><code>text-align</code>: Penjajaran teks (misal: <code>left</code>, <code>center</code>, <code>right</code>)</li>
+        <li><code>text-decoration</code>: Dekorasi teks (misal: <code>none</code> = hilangkan garis bawah link, <code>underline</code>, <code>line-through</code>)</li>
+    </ul>
+
+    <h3>B. Pengaturan Latar Belakang</h3>
+    <ul>
+        <li><code>background-color</code>: Warna latar belakang</li>
+        <li><code>background-image</code>: Gambar latar belakang (misal: <code>url("gambar.jpg")</code>)</li>
+        <li><code>background-repeat</code>: Pengulangan gambar latar (misal: <code>no-repeat</code>, <code>repeat-x</code>)</li>
+        <li><code>background-size</code>: Ukuran gambar latar (misal: <code>cover</code>, <code>contain</code>, <code>50%</code>)</li>
+    </ul>
+
+    <h3>C. Pengaturan Box Model (Model Kotak)</h3>
+    <p>Setiap elemen HTML dianggap sebagai kotak, terdiri dari:</p>
+    <ul>
+        <li><code>margin</code>: Ruang di luar batas elemen</li>
+        <li><code>border</code>: Garis batas di sekitar elemen</li>
+        <li><code>padding</code>: Ruang di dalam batas elemen</li>
+        <li><code>width</code>/<code>height</code>: Lebar/tinggi konten elemen</li>
+    </ul>
+    <p>Contoh:</p>
+<pre>
+.kotak {
+    width: 200px;
+    height: 100px;
+    padding: 15px;
+    border: 2px solid black;
+    margin: 10px;
+}
+</pre>
+
+    <h3>D. Pengaturan Tata Letak</h3>
+    <ul>
+        <li><code>display</code>: Menentukan cara elemen ditampilkan<br>
+            Misal: <code>block</code> (menempati baris penuh), <code>inline</code> (berbaris dengan elemen lain), <code>inline-block</code>, <code>none</code> (sembunyikan elemen)
+        </li>
+        <li><code>float</code>: Menggeser elemen ke kiri/kanan (misal: <code>left</code>, <code>right</code>)</li>
+        <li><code>position</code>: Pengaturan posisi elemen<br>
+            Misal: <code>static</code> (default), <code>relative</code> (posisi relatif dari tempatnya), <code>absolute</code> (posisi relatif dari induk yang memiliki posisi), <code>fixed</code> (tetap di tempat meskipun discroll)
+        </li>
+        <li><code>flexbox</code>: Metode modern untuk tata letak (gunakan <code>display: flex;</code> pada induk elemen)</li>
+    </ul>
+</body>
+</html>
