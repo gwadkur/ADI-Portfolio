@@ -46,11 +46,77 @@ section {
     flex-wrap: wrap;
 }
 
-/* Hero Section */
-#hero {
-    flex-wrap: wrap-reverse;
-    position: relative;
-    padding-top: 10rem;
+/* Styling Hard Skill & Soft Skill Sesuai Gambar */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 1.5rem;
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.hard-skill,
+.soft-skill {
+    width: calc(50% - 10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Hard Skill */
+.hard-skill {
+    background-color: #E9F5E1; /* Warna latar belakang hijau muda */
+    border: 2px solid #95D5B2; /* Warna border hijau */
+}
+
+.hard-skill h3 {
+    background-color: #95D5B2; /* Warna latar belakang hijau */
+    color: #2D6A4F; /* Warna teks hijau tua */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Soft Skill */
+.soft-skill {
+    background-color: #FFF1E6; /* Warna latar belakang peach muda */
+    border: 2px solid #FFE8D6; /* Warna border peach */
+}
+
+.soft-skill h3 {
+    background-color: #FFE8D6; /* Warna latar belakang peach */
+    color: #CB997E; /* Warna teks coklat muda */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Umum */
+.skill-list h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skill-list ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+}
+
+/* Media query untuk tampilan responsif */
+@media (max-width: 768px) {
+    .hard-skill,
+    .soft-skill {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 .hero-text {
